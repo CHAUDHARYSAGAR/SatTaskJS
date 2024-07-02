@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce web</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+      <input type="text" id="searchInput" class="text-field" placeholder="Search item">
+      <button class="submit-button" onclick="handleSearch()">Search</button>
+    </div>
+    
+    <div class="category-container">
+        <select class="categories-list" id="categories">
+            
+        </select>
+
+    </div>
+    
+    <div class="parent-container">
+        <div class="product-container" id="products">
+        </div>
+    </div>
+
+    <div class="offsetDropDown" >
+        <label for="offset">Items per page:</label>
+        <select id="offset" onchange="handleOffsetChange()">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+        </select>
+    </div>
+
+    <div class="pagination" >
+        <button class="page-button" id="prevPage" onclick="handlePageChange(-1)" disabled>Previous</button>
+        <span id="currentPage">1</span>
+        <button class="page-button" id="nextPage" onclick="handlePageChange(1)" disabled>Next</button>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
